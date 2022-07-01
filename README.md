@@ -1,2 +1,1 @@
-# SRL
-State Representation Learning for Goal-Conditioned Reinforcement Learning
+# MDP_temporal_representation
