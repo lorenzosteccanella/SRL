@@ -1,0 +1,24 @@
+{
+    "os": "Linux-5.13.0-51-generic-x86_64-with-glibc2.10",
+    "python": "3.8.8",
+    "heartbeatAt": "2022-07-01T12:41:43.907279",
+    "startedAt": "2022-07-01T12:41:41.402205",
+    "docker": null,
+    "cpu_count": 4,
+    "cuda": null,
+    "args": [
+        "1"
+    ],
+    "state": "running",
+    "program": "MountainCar_PER.py",
+    "codePath": "Cluster/Planning/MountainCar_PER.py",
+    "git": {
+        "remote": "git@github.com:lorenzosteccanella/SRL.git",
+        "commit": "6b0e87463687a430852c9aeca8e1d176ec411a95"
+    },
+    "email": "lorenzosteccanella@gmail.com",
+    "root": "/home/lorenzo/Documenti/UPF/SRL",
+    "host": "lorenzo-XPS-15-9550",
+    "username": "lorenzo",
+    "executable": "/home/lorenzo/anaconda3/envs/pytorch_env/bin/python"
+}
