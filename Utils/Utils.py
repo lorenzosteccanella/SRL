@@ -142,16 +142,22 @@ def collect_continuous_action_trajectories(env, n_of_trajectories=100, r_action_
     trajectories = []
     trajectory = []
 
-    for _ in range(n_of_trajectories):
-        s = env.reset()
+    for i in range(n_of_trajectories):
+        s, _ = env.reset()
+        s= s["observation"][:3]
         steps = 0
         done = False
         while not done:
-            a = r_action_fn()
-            s_, _, done, _ = env.step(a); steps += 1
+            # sample a numpy 4 dimensional vector
+            a = np.random.uniform(-0.5, 1, 4)
+            #a = env.action_space.sample()
+            a[3] = 0
+            out = env.step(a); steps += 1
+            s_, _, _, done, _ = out
+            s_ = s_["observation"][:3]
             trajectory.append(tuple((s, copy.deepcopy(a))))
             s = s_
-        trajectory.append(tuple((s_, np.array([0,0]))))  # DO I NEED THIS OR NOT??? THIS WOULD BE A TERMINAL STATE!!!
+        trajectory.append(tuple((s_, np.array([0,0,0,0]))))  # DO I NEED THIS OR NOT??? THIS WOULD BE A TERMINAL STATE!!!
         print(len(trajectory))
         trajectories.append(tuple(trajectory))
         trajectory.clear()
@@ -1420,4 +1426,25 @@ def calculate_stats_dataset(trajectories):
         R.append(-len(t))
     print("average ", sum(R)/len(R))
     print("max ", max(R))
+
+
+def convert_traj_to_sas(trajectories: list) -> list:
+    """
+    A function to convert trajectories in s, a, s_ format
+    Args:
+        trajectories:
+
+    Returns:
+        trajectories_sas: trajectories in s, a, s_ format
+
+    """
+    trajectories_sas = []
+    for traj in trajectories:
+        traj_sas = []
+        for i in range(len(traj) - 1):
+            traj_sas.append({"s": traj[i][0], "a": traj[i][1], "s_": traj[i + 1][0]})
+
+        trajectories_sas.append(traj_sas)
+
+    return trajectories_sas
 

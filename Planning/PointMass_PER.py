@@ -8,7 +8,7 @@ env = PointmassEnv(max_n_steps_episode=50)
 action_space = list(range(env.action_space.n))
 encoder = LearnedModel(2, 64, len(action_space))
 encoder.load_state_dict(
-    torch.load("/home/lorenzo/Documenti/UPF/MDP_DIST/Models/PointMass_action_states_dictionary_0"))
+    torch.load("/Saved_models/PointMass_action_states_dictionary_0"))
 
 seed = 0
 env.seed(seed)
