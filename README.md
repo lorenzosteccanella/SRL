@@ -1,6 +1,6 @@
 # State Representation Learning for Goal-Conditioned Reinforcement Learning
 
-Example.ipynb and Example_colab.ipynb present the complete pipeline going from training the model to perform planning on the learned model and use it to solve GC tasks.
+Example.ipynb and [Example_colab.ipynb](https://colab.research.google.com/github/lorenzosteccanella/SRL/blob/main/Example_colab.ipynb)  present the complete pipeline going from training the model to perform planning on the learned model and use it to solve GC tasks.
 
 Code for the algorithm presented in:
 
