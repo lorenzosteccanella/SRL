@@ -1,18 +1,8 @@
 import copy
-import itertools
-import math
 import random
-import time
 import numpy as np
-import torch
 import wandb
 from matplotlib import pyplot as plt
-from machin.frame.algorithms import DQNPer, DDPG
-from machin.utils.logging import default_logger as logger
-from machin.frame.buffers.prioritized_buffer import PrioritizedBuffer
-from machin.frame.transition import TransitionBase
-from torch.utils.data import Dataset
-from pylab import figure
 from mpl_toolkits.mplot3d import Axes3D
 
 from Envs.PointmassEnv import PointmassEnv
