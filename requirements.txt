@@ -1,0 +1,8 @@
+gym~=0.15.4
+numpy~=1.23.5
+torch~=1.13.0
+wandb~=0.12.11
+matplotlib~=3.5.3
+machin~=0.4.2
+tqdm~=4.62.2
+gymnasium~=0.29.1
