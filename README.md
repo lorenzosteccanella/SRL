@@ -1,6 +1,14 @@
 # State Representation Learning for Goal-Conditioned Reinforcement Learning
 
-Code to reproduce results in the paper "State Representation Learning for Goal-Conditioned Reinforcement Learning" 
+Example.ipynb present the compleate pipeline going from training the model to perform planning on the learned model and use it to solve GC tasks.
 
+Code for the algorithm presented in:
 
-NOTE: the code is still uncommented, we will make sure to improve the code documentation in the following months.
+@inproceedings{steccanella2022state,
+  title={State Representation Learning for Goal-Conditioned Reinforcement Learning},
+  author={Steccanella, Lorenzo and Jonsson, Anders},
+  booktitle={Joint European Conference on Machine Learning and Knowledge Discovery in Databases},
+  pages={84--99},
+  year={2022},
+  organization={Springer}
+}
